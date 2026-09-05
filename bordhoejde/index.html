@@ -6,8 +6,27 @@
 <title>Hvor høj skal et bord være? Beregn din bordhøjde | SESU bordben</title>
 <meta name="description" content="Et spisebord skal være 74–76 cm højt, et sofabord 42–52 cm. Beregn hvilken benhøjde du skal bruge til din bordplade — og se hvilke bordben der passer.">
 <link rel="canonical" href="https://sesu.dk/bordhoejde/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#141517">
+<link rel="icon" href="https://sesu.dk/wp-content/uploads/2021/09/logo-212X212.png">
+<link rel="apple-touch-icon" href="https://sesu.dk/wp-content/uploads/2021/09/logo-212X212.png">
+<link rel="alternate" hreflang="da-DK" href="https://sesu.dk/bordhoejde/">
+<link rel="alternate" hreflang="x-default" href="https://sesu.dk/bordhoejde/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SESU bordben">
+<meta property="og:locale" content="da_DK">
+<meta property="og:url" content="https://sesu.dk/bordhoejde/">
+<meta property="og:title" content="Hvor høj skal et bord være? Beregn din bordhøjde | SESU bordben">
+<meta property="og:description" content="Et spisebord skal være 74-76 cm, et sofabord 42-52 cm. Beregn hvilken benhøjde du skal bruge til din bordplade.">
+<meta property="og:image" content="https://sesu.dk/wp-content/uploads/slider/cache/476e634f66a50760851e4912ad0cb8f8/skraa-trapez-messing-bordben-bord-i-koekken--scaled.jpg">
+<meta property="og:image:alt" content="Skrå trapez bordben i messing under et køkkenbord">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hvor høj skal et bord være? Beregn din bordhøjde">
+<meta name="twitter:description" content="Vælg bordtype og pladetykkelse — så regner vi benhøjden ud.">
+<meta name="twitter:image" content="https://sesu.dk/wp-content/uploads/slider/cache/476e634f66a50760851e4912ad0cb8f8/skraa-trapez-messing-bordben-bord-i-koekken--scaled.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://sesu.dk">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -53,10 +72,10 @@ section{padding:74px 0}
 header.site{position:sticky;top:0;z-index:50;background:rgba(240,239,235,.94);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:30px;padding:15px 24px;max-width:var(--maxw);margin:0 auto}
-.logo{font-family:"Archivo";font-variation-settings:"wdth" 124;font-weight:900;font-size:1.45rem;
-  text-decoration:none;line-height:1}
-.logo small{display:block;font-family:"Instrument Sans";font-weight:500;font-size:.57rem;
-  letter-spacing:.36em;color:var(--concrete);margin-top:3px}
+.brand{display:flex;align-items:center;text-decoration:none}
+.brand img{height:48px;width:auto}
+.brand .fallback{font-family:"Archivo";font-variation-settings:"wdth" 124;font-weight:900;font-size:1.45rem;display:none}
+.flogo{height:58px;width:auto;filter:brightness(0) invert(1);opacity:.92;margin-bottom:18px}
 nav.main{display:flex;gap:24px;margin-left:auto;font-size:.93rem;font-weight:500}
 nav.main a{text-decoration:none;padding:5px 0;border-bottom:2px solid transparent}
 nav.main a:hover,nav.main a[aria-current]{border-color:var(--brass)}
@@ -221,21 +240,25 @@ footer a:hover{color:var(--brass-lit)}
 </div></div>
 
 <header class="site"><div class="bar">
-  <a class="logo" href="/">SESU<small>BORDBEN</small></a>
+  <a class="brand" href="../" aria-label="SESU bordben, til forsiden">
+    <img src="https://sesu.dk/wp-content/uploads/2021/08/logo_with_name.png" alt="SESU bordben"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="fallback">SESU</span>
+  </a>
   <nav class="main">
-    <a href="/bogstavs-bordben/">Bogstavs bordben</a>
-    <a href="/hairpin-bordben/">Hairpin</a>
-    <a href="/understel-bordben/">Understel</a>
-    <a href="/tilbehoer/">Tilbehør</a>
-    <a href="/bordhoejde/" aria-current="page">Bordhøjde</a>
+    <a href="https://sesu.dk/bogstavs-bordben/">Bogstavs bordben</a>
+    <a href="https://sesu.dk/hairpin-bordben/">Hairpin</a>
+    <a href="https://sesu.dk/understel-bordben/">Understel</a>
+    <a href="https://sesu.dk/tilbehoer/">Tilbehør</a>
+    <a href="./" aria-current="page">Bordhøjde</a>
   </nav>
   <button class="burger" aria-label="Åbn menu">Menu</button>
-  <a class="cart" href="/kurv/">Kurv <span>(0)</span></a>
+  <a class="cart" href="https://sesu.dk/kurv/">Kurv <span>(0)</span></a>
 </div></header>
 
 <main id="main">
 
-<div class="wrap crumbs"><a href="/">Forside</a> / Bordhøjde</div>
+<div class="wrap crumbs"><a href="../">Forside</a> / Bordhøjde</div>
 
 <div class="wrap intro">
   <h1>Hvor høj skal dit bord være?</h1>
@@ -392,24 +415,43 @@ footer a:hover{color:var(--brass-lit)}
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <h4>SESU bordben</h4>
+        <img class="flogo" src="https://sesu.dk/wp-content/uploads/2021/08/logo_with_name.png" alt="SESU bordben" loading="lazy">
         <p>Siden 2015 har vi lavet bordben til spisebord, sofabord og alt derimellem. Primært i metal, i enkle former og mange farver.</p>
-        <p style="margin-top:16px">Næsbyvej 6, 4200 Slagelse<br>Telefon 22 22 36 21<br>info@sesu.dk</p>
+        <p style="margin-top:16px">Næsbyvej 6, 4200 Slagelse<br><a href="tel:+4522223621" style="display:inline">Telefon 22 22 36 21</a><br><a href="mailto:info@sesu.dk" style="display:inline">info@sesu.dk</a></p>
       </div>
       <div><h4>Bordben</h4>
-        <a href="/bogstavs-bordben/">Bogstavs bordben</a><a href="/hairpin-bordben/">Hairpin bordben</a>
-        <a href="/understel-bordben/">Understel</a><a href="/tilbehoer/">Tilbehør</a><a href="/tilbud/">Tilbud</a></div>
+        <a href="https://sesu.dk/bogstavs-bordben/">Bogstavs bordben</a><a href="https://sesu.dk/hairpin-bordben/">Hairpin bordben</a>
+        <a href="https://sesu.dk/understel-bordben/">Understel</a><a href="https://sesu.dk/tilbehoer/">Tilbehør</a><a href="https://sesu.dk/tilbud/">Tilbud</a></div>
       <div><h4>Guides</h4>
-        <a href="/bordhoejde/">Bordhøjde</a><a href="#">Vælg den rigtige form</a>
-        <a href="#">Montering af bordben</a><a href="#">Pleje af messing og kobber</a></div>
+        <a href="./">Bordhøjde</a><a href="https://sesu.dk/bogstavs-bordben/">Vælg den rigtige form</a>
+        <a href="https://sesu.dk/tilbehoer/skruer/">Montering og skruer</a><a href="https://sesu.dk/faq-page/">Pleje af messing og kobber</a></div>
       <div><h4>Kundeservice</h4>
-        <a href="/kontakt-os">Kontakt os</a><a href="/faq-page/">FAQ</a>
-        <a href="/betingelser/">Handels- og leveringsbetingelser</a><a href="/returret/">Retur og tilbagebetaling</a></div>
+        <a href="https://sesu.dk/kontakt-os">Kontakt os</a><a href="https://sesu.dk/faq-page/">FAQ</a>
+        <a href="https://sesu.dk/betingelser/">Handels- og leveringsbetingelser</a><a href="https://sesu.dk/returret/">Retur og tilbagebetaling</a></div>
     </div>
     <div class="legal"><span>© 2015–2026 SESU · Khaki ApS</span><span>Alle priser er inkl. moms</span></div>
   </div>
 </footer>
 
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"BreadcrumbList","itemListElement":[
+ {"@type":"ListItem","position":1,"name":"Forside","item":"https://sesu.dk/"},
+ {"@type":"ListItem","position":2,"name":"Bordhøjde","item":"https://sesu.dk/bordhoejde/"}]},
+{"@type":"Organization","@id":"https://sesu.dk/#org","name":"SESU bordben","legalName":"Khaki ApS","url":"https://sesu.dk/",
+ "logo":{"@type":"ImageObject","url":"https://sesu.dk/wp-content/uploads/2021/08/logo_with_name.png"},
+ "address":{"@type":"PostalAddress","streetAddress":"Næsbyvej 6","postalCode":"4200","addressLocality":"Slagelse","addressCountry":"DK"},
+ "contactPoint":{"@type":"ContactPoint","telephone":"+45-22-22-36-21","email":"info@sesu.dk","contactType":"customer service","areaServed":"DK","availableLanguage":"Danish"},
+ "sameAs":["https://www.facebook.com/sesubordben/","https://www.instagram.com/sesu_dk/"]},
+{"@type":"HowTo","name":"Sådan finder du den rigtige benhøjde til dit bord","inLanguage":"da-DK",
+ "description":"Beregn hvilken benhøjde du skal bruge ud fra bordets formål og bordpladens tykkelse.",
+ "totalTime":"PT2M",
+ "step":[
+  {"@type":"HowToStep","position":1,"name":"Vælg bordets formål","text":"Bestem om det er et spisebord, skrivebord, sofabord, sidebord eller en bænk. Hver type har sit anbefalede højdeinterval."},
+  {"@type":"HowToStep","position":2,"name":"Mål bordpladens tykkelse","text":"Mål pladen i centimeter. Massiv eg ligger typisk på 3-4 cm, finér og laminat på 1,8-2,5 cm."},
+  {"@type":"HowToStep","position":3,"name":"Træk pladen fra den ønskede højde","text":"Benhøjden er den færdige bordhøjde minus pladens tykkelse. Et spisebord på 74 cm med en 3 cm plade kræver 71 cm ben."},
+  {"@type":"HowToStep","position":4,"name":"Vælg form og antal","text":"A, U, X, trapez og skrå trapez klarer sig med to ben. Hairpin og V-hairpin er enkeltben, så der skal fire til."}]}]}
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Hvor høj skal et spisebord være?","acceptedAnswer":{"@type":"Answer","text":"Et spisebord er behageligt ved 74-76 cm i færdig højde inklusive bordplade. Med en 3 cm plade svarer det til bordben på 71 cm."}},
@@ -443,19 +485,19 @@ footer a:hover{color:var(--brass-lit)}
   /* Priser og billeder hentet fra sesu.dk. Udvid med resten af sortimentet. */
   var PRODUCTS = [
     {form:'skraa', h:71, name:'Messing skrå trapez', finish:'Messing, mat', price:1449,
-     img:'https://sesu.dk/wp-content/uploads/2022/04/skraa_trapez_messing_71cm_side_4.png', url:'/messing-skraa-trapez-71cm/'},
+     img:'https://sesu.dk/wp-content/uploads/2022/04/skraa_trapez_messing_71cm_side_4.png', url:'https://sesu.dk/messing-skraa-trapez-71cm/'},
     {form:'skraa', h:71, name:'Late night black skrå trapez', finish:'Mat sort', price:899,
-     img:'https://sesu.dk/wp-content/uploads/2022/04/skr%C3%A5-trapez-bordben-sort-front-og-side--scaled.jpg', url:'/late-night-black-skraa-trapez-71cm/'},
+     img:'https://sesu.dk/wp-content/uploads/2022/04/skr%C3%A5-trapez-bordben-sort-front-og-side--scaled.jpg', url:'https://sesu.dk/late-night-black-skraa-trapez-71cm/'},
     {form:'a', h:71, name:'Dark messing A-bordben', finish:'Bruneret messing', price:1349,
-     img:'https://sesu.dk/wp-content/uploads/2021/09/products-a-bordben-71-burneret-messing-front.png', url:'/dark-messing-a-formede-bordben-71cm/'},
+     img:'https://sesu.dk/wp-content/uploads/2021/09/products-a-bordben-71-burneret-messing-front.png', url:'https://sesu.dk/dark-messing-a-formede-bordben-71cm/'},
     {form:'x', h:71, name:'Dark messing X-bordben', finish:'Bruneret messing', price:1349,
-     img:'https://sesu.dk/wp-content/uploads/2020/07/burneret-messing-x-bordben-71cm-front.png', url:'/dark-messing-x-formede-bordben-71cm/'},
+     img:'https://sesu.dk/wp-content/uploads/2020/07/burneret-messing-x-bordben-71cm-front.png', url:'https://sesu.dk/dark-messing-x-formede-bordben-71cm/'},
     {form:'v', h:71, name:'Messing V-hairpin', finish:'Messing, mat', price:190,
-     img:'https://sesu.dk/wp-content/uploads/2023/09/messing-V-71cm-front.png', url:'/messing-v-hairpin-bordben-71cm-mat/'},
+     img:'https://sesu.dk/wp-content/uploads/2023/09/messing-V-71cm-front.png', url:'https://sesu.dk/messing-v-hairpin-bordben-71cm-mat/'},
     {form:'v', h:71, name:'V-hairpin bordben, sort', finish:'Mat sort', price:180,
-     img:'https://sesu.dk/wp-content/uploads/2023/09/sort-V-71cm-front.png', url:'/v-hairpin-bordben-black-71cm/'},
+     img:'https://sesu.dk/wp-content/uploads/2023/09/sort-V-71cm-front.png', url:'https://sesu.dk/v-hairpin-bordben-black-71cm/'},
     {form:'hairpin', h:35, name:'Messing hairpin, 3 stænger', finish:'Messing, mat', price:250,
-     img:'https://sesu.dk/wp-content/uploads/2022/06/hairpin_messing_35cm_3_ligger_2022.jpg', url:'/messing-35cm-3-staenger-hairpin-bordben/'}
+     img:'https://sesu.dk/wp-content/uploads/2022/06/hairpin_messing_35cm_3_ligger_2022.jpg', url:'https://sesu.dk/messing-35cm-3-staenger-hairpin-bordben/'}
   ];
 
   var FREE_SHIP = 1000;
@@ -560,7 +602,7 @@ footer a:hover{color:var(--brass-lit)}
     if(!list.length){
       grid.innerHTML = '<div class="emptypick"><h3>Se alle ben i '+state.leg+' cm</h3>'+
         '<p style="color:var(--soft);margin:10px 0 18px">Vælg form og farve i oversigten.</p>'+
-        '<a class="btn btn-dark" href="/bogstavs-bordben/">Se '+state.leg+' cm bordben</a></div>';
+        '<a class="btn btn-dark" href="https://sesu.dk/bogstavs-bordben/">Se '+state.leg+' cm bordben</a></div>';
     } else {
       list.forEach(function(p,i){
         var line=p.price*state.qty;
