@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SESU bordben — byg dit eget bord i messing, kobber, sort eller hvid</title>
+<meta name="description" content="Danske bordben i metal siden 2015. A, U, X, trapez, skrå trapez og hairpin i seks overflader. Beregn din bordhøjde med vores bordbygger.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141517;
+  --ink-2:#1E2022;
+  --soft:#55595D;
+  --concrete:#8B8D89;
+  --line:#DAD9D3;
+  --line-dark:#33363A;
+  --paper:#F0EFEB;
+  --white:#FBFBF9;
+  --brass:#A07C33;
+  --brass-lit:#D3B677;
+  --copper:#A25E38;
+  --maxw:1280px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Instrument Sans",system-ui,-apple-system,sans-serif;
+  font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Archivo",system-ui,sans-serif;font-weight:700;
+  font-variation-settings:"wdth" 112;letter-spacing:-.024em;line-height:1.03;margin:0}
+h1{font-size:clamp(2.5rem,6.6vw,5.1rem);font-variation-settings:"wdth" 118;font-weight:800}
+h2{font-size:clamp(1.8rem,3.6vw,2.9rem)}
+h3{font-size:1.28rem;font-variation-settings:"wdth" 106}
+h4{font-size:1rem;font-variation-settings:"wdth" 104;letter-spacing:-.008em}
+p{margin:0 0 1em}
+a{color:inherit}
+img{display:block;max-width:100%}
+button{font:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.lede{font-size:1.08rem;color:var(--soft);max-width:58ch}
+:focus-visible{outline:2.5px solid var(--brass);outline-offset:3px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;background:var(--ink);color:#fff;padding:10px 16px;z-index:99}
+section{padding:88px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:38px;flex-wrap:wrap}
+.more{font-weight:600;font-size:.93rem;text-decoration:none;border-bottom:2px solid var(--brass);padding-bottom:3px;white-space:nowrap}
+
+/* header */
+.utility{background:var(--ink);color:#CFCEC8;font-size:.8rem}
+.utility .wrap{display:flex;gap:30px;justify-content:center;padding:9px 24px;flex-wrap:wrap}
+.utility b{color:var(--brass-lit);font-weight:600}
+header.site{position:sticky;top:0;z-index:50;background:rgba(240,239,235,.93);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:30px;padding:15px 24px;max-width:var(--maxw);margin:0 auto}
+.logo{font-family:"Archivo";font-variation-settings:"wdth" 124;font-weight:900;
+  font-size:1.5rem;letter-spacing:.01em;text-decoration:none;line-height:1}
+.logo small{display:block;font-family:"Instrument Sans";font-weight:500;font-size:.58rem;
+  letter-spacing:.36em;color:var(--concrete);margin-top:3px}
+nav.main{display:flex;gap:24px;margin-left:auto;font-size:.93rem;font-weight:500}
+nav.main a{text-decoration:none;padding:5px 0;border-bottom:2px solid transparent;transition:border-color .16s}
+nav.main a:hover{border-color:var(--brass)}
+.cart{display:flex;align-items:center;gap:7px;font-size:.92rem;font-weight:600;text-decoration:none;
+  border:1.5px solid var(--ink);padding:9px 16px;border-radius:2px;transition:.16s}
+.cart:hover{background:var(--ink);color:var(--paper)}
+.burger{display:none;background:none;border:1.5px solid var(--ink);border-radius:2px;padding:9px 13px;font-size:.9rem;margin-left:auto;cursor:pointer}
+
+/* hero */
+.hero{position:relative;background:#101112;color:#fff;overflow:hidden}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;opacity:.62;
+  transform:scale(1.06);animation:slowzoom 14s ease-out forwards}
+@keyframes slowzoom{to{transform:scale(1)}}
+.hero-media::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(12,13,14,.94) 0%,rgba(12,13,14,.72) 42%,rgba(12,13,14,.25) 100%)}
+.hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:118px 24px 74px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.82rem;font-weight:500;
+  color:var(--brass-lit);margin-bottom:22px}
+.eyebrow i{display:block;width:26px;height:1.5px;background:var(--brass);font-style:normal}
+.hero h1{max-width:15ch}
+.hero .lede{color:#C6C6C2;margin-top:22px;font-size:1.14rem;max-width:48ch}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;
+  font-size:.96rem;padding:15px 27px;border-radius:2px;border:1.5px solid transparent;cursor:pointer;transition:.18s}
+.btn-brass{background:var(--brass);color:#15140F;border-color:var(--brass)}
+.btn-brass:hover{background:var(--brass-lit);border-color:var(--brass-lit)}
+.btn-line{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-line:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn-dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-dark:hover{background:#000}
+.hero-facts{display:flex;gap:44px;margin-top:58px;flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,.16);padding-top:26px}
+.hero-facts div{min-width:104px}
+.hero-facts strong{display:block;font-family:"Archivo";font-variation-settings:"wdth" 112;
+  font-weight:700;font-size:1.9rem;letter-spacing:-.02em}
+.hero-facts span{font-size:.85rem;color:#9B9C99}
+.hero>*{opacity:0;animation:rise .8s cubic-bezier(.2,.7,.3,1) forwards}
+.hero-inner>*{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
+.hero-media{opacity:1;animation:none}
+.hero-inner>.eyebrow{animation-delay:.05s}
+.hero-inner>h1{animation-delay:.14s}
+.hero-inner>.lede{animation-delay:.24s}
+.hero-inner>.hero-actions{animation-delay:.32s}
+.hero-inner>.hero-facts{animation-delay:.4s}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* shapes */
+.shapes{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line)}
+.shape{background:var(--white);text-decoration:none;padding:28px 18px 22px;
+  display:flex;flex-direction:column;align-items:center;gap:15px;transition:background .18s}
+.shape:hover{background:#fff}
+.shape svg{width:94px;height:94px;overflow:visible}
+.shape .metal{stroke:var(--ink);stroke-width:7;fill:none;stroke-linecap:butt;stroke-linejoin:miter;
+  transition:stroke .2s}
+.shape .thin{stroke-width:4.6}
+.shape:hover .metal{stroke:var(--brass);stroke-dasharray:1;animation:draw .75s cubic-bezier(.5,0,.2,1)}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.shape-name{font-weight:600;font-size:1rem}
+.shape-meta{font-size:.81rem;color:var(--concrete);margin-top:-11px}
+
+/* builder */
+.builder{background:var(--ink);color:var(--paper)}
+.builder h2{color:#fff}
+.builder .lede{color:#A2A4A2}
+.b-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:0;
+  border:1px solid var(--line-dark);border-radius:3px;overflow:hidden;background:var(--ink-2)}
+.b-controls{padding:34px 32px;border-right:1px solid var(--line-dark)}
+.b-stage{padding:30px 32px 26px;background:#101113;display:flex;flex-direction:column}
+.ctl{margin-bottom:28px}
+.ctl>label{display:block;font-size:.82rem;color:#8E908E;margin-bottom:11px;font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:transparent;border:1.5px solid #3A3D41;color:#DCDCD8;padding:9px 14px;
+  border-radius:2px;font-size:.9rem;font-weight:500;cursor:pointer;transition:.15s;display:flex;align-items:center;gap:8px}
+.chip:hover{border-color:#6A6D71}
+.chip[aria-pressed="true"]{background:var(--brass);border-color:var(--brass);color:#15140F}
+.chip svg{width:20px;height:20px;overflow:visible}
+.chip svg path{stroke:currentColor;stroke-width:8;fill:none}
+.slider-row{display:flex;align-items:center;gap:16px}
+input[type=range]{flex:1;accent-color:var(--brass);height:26px}
+.plate-val{font-family:"Archivo";font-variation-settings:"wdth" 108;font-weight:700;
+  font-size:1.15rem;min-width:66px;text-align:right}
+.readout{border-top:1px solid var(--line-dark);padding-top:24px;margin-top:4px}
+.readout .big{font-family:"Archivo";font-variation-settings:"wdth" 118;font-weight:800;
+  font-size:clamp(3rem,7vw,4.4rem);line-height:.94;letter-spacing:-.035em;color:#fff}
+.readout .big span{font-size:1.4rem;font-weight:600;letter-spacing:0;margin-left:6px;color:var(--brass-lit)}
+.readout .verdict{margin-top:14px;font-weight:600;color:#fff}
+.readout .note{font-size:.92rem;color:#9B9D9B;margin:6px 0 0}
+.readout .flag{display:inline-block;margin-top:14px;font-size:.85rem;padding:6px 11px;border-radius:2px}
+.flag.ok{background:rgba(160,124,51,.18);color:var(--brass-lit)}
+.flag.warn{background:rgba(162,94,56,.2);color:#E0A47D}
+.b-stage svg{width:100%;height:auto;flex:1}
+.stage-cap{font-size:.83rem;color:#7C7E7C;text-align:center;margin-top:8px}
+.b-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+
+/* finishes */
+.finishes{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.finish{text-decoration:none;color:inherit;display:block}
+.swatch{height:128px;border-radius:2px;border:1px solid rgba(0,0,0,.1);
+  transition:transform .22s cubic-bezier(.3,.7,.3,1),box-shadow .22s}
+.finish:hover .swatch{transform:translateY(-6px);box-shadow:0 12px 26px rgba(20,21,23,.22)}
+.finish p{margin:13px 0 0;font-weight:600;font-size:.96rem}
+.finish span{color:var(--concrete);font-size:.83rem}
+.f-messing{background:linear-gradient(148deg,#E3CB92,#A07C33 58%,#7C5F26)}
+.f-dark{background:linear-gradient(148deg,#856C3E,#3B2F1D 58%,#241C11)}
+.f-kobber{background:linear-gradient(148deg,#DB9A6D,#A25E38 58%,#7A4123)}
+.f-sort{background:linear-gradient(148deg,#4A4C51,#1B1C1F 58%,#0D0E10)}
+.f-hvid{background:linear-gradient(148deg,#FFFFFF,#EAEAE6 58%,#CECEC8)}
+.f-raw{background:linear-gradient(148deg,#D2D5D9,#8A9096 58%,#666C72)}
+
+/* products */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 24px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:3px;
+  display:flex;flex-direction:column;position:relative;transition:border-color .18s,box-shadow .22s,transform .22s}
+.card:hover{border-color:#B9B8B1;box-shadow:0 14px 30px rgba(20,21,23,.09);transform:translateY(-3px)}
+.badge{position:absolute;top:12px;left:12px;z-index:2;font-size:.72rem;font-weight:600;
+  padding:5px 9px;border-radius:2px;background:var(--ink);color:var(--paper)}
+.badge.new{background:var(--brass);color:#15140F}
+.card .ph{aspect-ratio:1/1;background:#fff;display:flex;align-items:center;justify-content:center;
+  padding:18px;border-bottom:1px solid var(--line);overflow:hidden}
+.card .ph img{max-height:100%;width:auto;object-fit:contain;mix-blend-mode:multiply;
+  transition:transform .4s cubic-bezier(.3,.7,.3,1)}
+.card:hover .ph img{transform:scale(1.05)}
+.card .body{padding:16px 17px 18px;display:flex;flex-direction:column;gap:9px;flex:1}
+.cat{font-size:.78rem;color:var(--concrete)}
+.card h4 a{text-decoration:none}
+.dots{display:flex;gap:6px}
+.dots i{width:14px;height:14px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.13)}
+.price{margin-top:auto;font-family:"Archivo";font-variation-settings:"wdth" 108;
+  font-weight:700;font-size:1.16rem}
+.price em{font-style:normal;font-family:"Instrument Sans";font-weight:400;
+  font-size:.78rem;color:var(--concrete);margin-left:6px}
+.add{margin:0 17px 17px;font-weight:600;font-size:.9rem;padding:12px;background:var(--ink);
+  color:var(--paper);border:0;border-radius:2px;cursor:pointer;transition:background .18s}
+.add:hover{background:var(--brass);color:#15140F}
+
+/* inspiration */
+.mosaic{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:1fr 1fr;gap:20px;height:520px}
+.mosaic img{width:100%;height:100%;object-fit:cover;border-radius:2px}
+.mosaic a:first-child{grid-row:span 2}
+.mosaic a{overflow:hidden;border-radius:2px;display:block}
+.mosaic img{transition:transform .5s cubic-bezier(.3,.7,.3,1)}
+.mosaic a:hover img{transform:scale(1.04)}
+
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:46px 0;
+  border-top:1px solid var(--line);margin-top:70px}
+.trust h4{margin-bottom:6px}
+.trust p{font-size:.92rem;color:var(--soft);margin:0}
+
+/* footer */
+footer{background:var(--ink);color:#C4C4C0;padding:66px 0 30px;font-size:.93rem}
+footer h4{color:#fff;margin-bottom:15px}
+.fgrid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.3fr;gap:44px}
+footer a{text-decoration:none;display:block;padding:4px 0;transition:color .15s}
+footer a:hover{color:var(--brass-lit)}
+.news{display:flex;gap:8px;margin-top:14px}
+.news input{flex:1;min-width:0;padding:12px;border:1px solid #43464A;background:#1C1E20;
+  color:#fff;border-radius:2px;font:inherit;font-size:.9rem}
+.news button{padding:12px 19px;border:0;background:var(--brass);color:#15140F;
+  font-weight:600;border-radius:2px;cursor:pointer}
+.legal{border-top:1px solid #2C2F32;margin-top:48px;padding-top:22px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.85rem;color:#82847F}
+
+@media(max-width:1020px){
+  .b-grid{grid-template-columns:1fr}
+  .b-controls{border-right:0;border-bottom:1px solid var(--line-dark)}
+  .shapes{grid-template-columns:repeat(2,1fr)}
+  .finishes{grid-template-columns:repeat(3,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .trust{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr 1fr}
+  nav.main{display:none}.burger{display:block}.cart span{display:none}
+  section{padding:62px 0}
+  .hero-inner{padding:74px 24px 54px}
+  .mosaic{grid-template-columns:1fr;grid-template-rows:auto;height:auto}
+  .mosaic a:first-child{grid-row:auto;height:300px}
+  .mosaic a{height:220px}
+}
+@media(max-width:560px){
+  .finishes{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:1fr 1fr;gap:16px 13px}
+  .card .body{padding:12px}
+  .add{margin:0 12px 12px}
+  .fgrid{grid-template-columns:1fr}
+  .b-controls,.b-stage{padding:24px 20px}
+  .hero-facts{gap:26px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}
+  .hero-inner>*{opacity:1}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Gå til indhold</a>
+
+<div class="utility"><div class="wrap">
+  <span><b>Fri fragt</b> til pakkeshop over 1.000 kr.</span>
+  <span>14 dages returret</span>
+  <span>Dansk lager · afsendes alle hverdage</span>
+</div></div>
+
+<header class="site"><div class="bar">
+  <a class="logo" href="#">SESU<small>BORDBEN</small></a>
+  <nav class="main">
+    <a href="#former">Former</a>
+    <a href="bordhoejde/">Bordhøjde</a>
+    <a href="#farver">Farver</a>
+    <a href="#produkter">Bordben</a>
+    <a href="#inspiration">Inspiration</a>
+  </nav>
+  <button class="burger" aria-label="Åbn menu">Menu</button>
+  <a class="cart" href="#">Kurv <span>(0)</span></a>
+</div></header>
+
+<main id="main">
+
+<div class="hero">
+  <div class="hero-media">
+    <img src="https://sesu.dk/wp-content/uploads/slider/cache/d95a54773905fc03bf7e7f2d36b5ba1e/messing-bordben-med-egplanke-bord.png" alt="Spisebord i egeplanke på messing bordben">
+  </div>
+  <div class="hero-inner">
+    <div class="eyebrow"><i></i>Bordben i metal siden 2015</div>
+    <h1>Vælg formen. Vælg farven. Byg dit bord.</h1>
+    <p class="lede">Otte former i seks overflader, fra 35 til 71 cm. Sæt din egen plade på, og få et bord der er dit — ikke et der står i tusind andre stuer.</p>
+    <div class="hero-actions">
+      <a class="btn btn-brass" href="bordhoejde/">Beregn din bordhøjde</a>
+      <a class="btn btn-line" href="#former">Se alle former</a>
+    </div>
+    <div class="hero-facts">
+      <div><strong>8</strong><span>former</span></div>
+      <div><strong>6</strong><span>overflader</span></div>
+      <div><strong>4</strong><span>højder</span></div>
+      <div><strong>11 år</strong><span>med bordben</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="former">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Formen sætter tonen</h2>
+        <p class="lede" style="margin-top:15px">Den bestemmer udtrykket og hvor meget benplads der bliver. Vælg en profil for at se højder, farver og priser.</p>
+      </div>
+      <a class="more" href="#produkter">Se alle bordben</a>
+    </div>
+    <div class="shapes">
+      <a class="shape" href="#"><svg viewBox="0 0 100 100" aria-hidden="true"><path pathLength="1" class="metal" d="M20 92 L50 14 L80 92"/><path pathLength="1" class="metal" d="M31 62 H69"/></svg><div class="shape-name">A-form</div><div class="shape-meta">45 &amp; 71 cm</div></a>
+      <a class="shape" href="#"><svg viewBox="0 0 100 100" aria-hidden="true"><path pathLength="1" class="metal" d="M22 92 V18 H78 V92"/></svg><div class="shape-name">U-form</div><div class="shape-meta">Wide &amp; Fat</div></a>
+      <a class="shape" href="#"><svg viewBox="0 0 100 100" aria-hidden="true"><path pathLength="1" class="metal" d="M14 92 L31 18 H69 L86 92"/></svg><div class="shape-name">Trapez</div><div class="shape-meta">45 &amp; 71 cm</div></a>
+      <a class="shape" href="#"><svg viewBox="0 0 100 100" aria-hidden="true"><path pathLength="1" class="metal" d="M12 92 L34 18 H84 V92"/></svg><div class="shape-name">Skrå trapez</div><div class="shape-meta">Nyeste model</div></a>
+      <a class="shape" href="#"><svg viewBox="0 0 100 100" aria-hidden="true"><path pathLength="1" class="metal" d="M20 20 L80 90 M80 20 L20 90"/><path pathLength="1" class="metal" d="M16 15 H84"/></svg><div class="shape-name">X-form</div><div class="shape-meta">45 &amp; 71 cm</div></a>
+      <a class="shape" href="#"><svg viewBox="0 0 100 100" aria-hidden="true"><path pathLength="1" class="metal thin" d="M26 92 C27 46 40 22 50 15 C60 22 63 52 63 92"/><path pathLength="1" class="metal thin" d="M38 92 C39 50 46 26 50 15"/></svg><div class="shape-name">Hairpin</div><div class="shape-meta">2 &amp; 3 stænger</div></a>
+      <a class="shape" href="#"><svg viewBox="0 0 100 100" aria-hidden="true"><path pathLength="1" class="metal thin" d="M22 92 L50 16 L78 92"/></svg><div class="shape-name">V-hairpin</div><div class="shape-meta">71 cm</div></a>
+      <a class="shape" href="#"><svg viewBox="0 0 100 100" aria-hidden="true"><path pathLength="1" class="metal" d="M16 18 H84 M16 92 H84 M20 18 L80 92 M80 18 L20 92"/></svg><div class="shape-name">Understel</div><div class="shape-meta">Butterfly, Cross, O</div></a>
+    </div>
+  </div>
+</section>
+
+<section class="builder" id="byg">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Bordbyggeren</h2>
+        <p class="lede" style="margin-top:15px">Vælg form, benhøjde og pladetykkelse. Så tegner vi bordet i skala og fortæller, om højden passer til det, du skal bruge det til.</p>
+      </div>
+    </div>
+
+    <div class="b-grid">
+      <div class="b-controls">
+        <div class="ctl">
+          <label id="lbl-form">Form</label>
+          <div class="chips" id="formChips" role="group" aria-labelledby="lbl-form"></div>
+        </div>
+        <div class="ctl">
+          <label id="lbl-h">Benhøjde</label>
+          <div class="chips" id="heightChips" role="group" aria-labelledby="lbl-h"></div>
+        </div>
+        <div class="ctl">
+          <label for="plate">Bordplade, tykkelse</label>
+          <div class="slider-row">
+            <input id="plate" type="range" min="1.5" max="8" step="0.5" value="3">
+            <span class="plate-val" id="plateVal">3,0 cm</span>
+          </div>
+        </div>
+        <div class="readout">
+          <div class="big" id="total">74<span>cm</span></div>
+          <div class="verdict" id="verdict"></div>
+          <p class="note" id="note"></p>
+          <span class="flag ok" id="flag"></span>
+        </div>
+        <div class="b-cta">
+          <a class="btn btn-brass" href="bordhoejde/" id="shopLink">Se disse ben</a>
+        </div>
+      </div>
+
+      <div class="b-stage">
+        <svg id="stage" viewBox="0 0 420 300" role="img" aria-labelledby="stageTitle">
+          <title id="stageTitle">Skalategning af bord med valgt benhøjde og pladetykkelse</title>
+        </svg>
+        <div class="stage-cap">Tegnet i skala. Stolen viser en almindelig siddehøjde på 45 cm.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="farver">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Seks overflader</h2>
+        <p class="lede" style="margin-top:15px">Alle ben leveres færdigbehandlet. Messing og kobber patinerer langsomt og bliver dybere med årene — det er meningen.</p>
+      </div>
+      <a class="more" href="#produkter">Se farverne på produkterne</a>
+    </div>
+    <div class="finishes">
+      <a class="finish" href="#"><div class="swatch f-messing"></div><p>Messing, mat</p><span>Varm og lys</span></a>
+      <a class="finish" href="#"><div class="swatch f-dark"></div><p>Dark messing</p><span>Bruneret, råt</span></a>
+      <a class="finish" href="#"><div class="swatch f-kobber"></div><p>Kobber</p><span>Rødlig glød</span></a>
+      <a class="finish" href="#"><div class="swatch f-sort"></div><p>Late night black</p><span>Dyb mat sort</span></a>
+      <a class="finish" href="#"><div class="swatch f-hvid"></div><p>Hvid</p><span>Til lyse plader</span></a>
+      <a class="finish" href="#"><div class="swatch f-raw"></div><p>Raw metal</p><span>Ubehandlet stål</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="produkter" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>Populære lige nu</h2></div>
+      <a class="more" href="#">Alle produkter</a>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <span class="badge">Bestseller</span>
+        <a class="ph" href="#"><img src="https://sesu.dk/wp-content/uploads/2021/09/products-a-bordben-71-burneret-messing-front.png" alt="Dark messing A-bordben 71 cm forfra" loading="lazy"></a>
+        <div class="body">
+          <div class="cat">A-form · 71 cm</div>
+          <h4><a href="#">Dark messing A-bordben</a></h4>
+          <div class="dots"><i class="f-dark"></i><i class="f-messing"></i><i class="f-kobber"></i><i class="f-sort"></i><i class="f-hvid"></i></div>
+          <div class="price">1.349 kr. <em>pr. stk.</em></div>
+        </div>
+        <button class="add">Læg i kurv</button>
+      </div>
+
+      <div class="card">
+        <a class="ph" href="#"><img src="https://sesu.dk/wp-content/uploads/2020/07/burneret-messing-x-bordben-71cm-front.png" alt="Dark messing X-bordben 71 cm forfra" loading="lazy"></a>
+        <div class="body">
+          <div class="cat">X-form · 71 cm</div>
+          <h4><a href="#">Dark messing X-bordben</a></h4>
+          <div class="dots"><i class="f-dark"></i><i class="f-messing"></i><i class="f-kobber"></i><i class="f-sort"></i></div>
+          <div class="price">1.349 kr. <em>pr. stk.</em></div>
+        </div>
+        <button class="add">Læg i kurv</button>
+      </div>
+
+      <div class="card">
+        <span class="badge new">Ny model</span>
+        <a class="ph" href="#"><img src="https://sesu.dk/wp-content/uploads/2022/04/skraa_trapez_messing_71cm_side_4.png" alt="Messing skrå trapez bordben 71 cm fra siden" loading="lazy"></a>
+        <div class="body">
+          <div class="cat">Skrå trapez · 71 cm</div>
+          <h4><a href="#">Messing skrå trapez</a></h4>
+          <div class="dots"><i class="f-messing"></i><i class="f-sort"></i></div>
+          <div class="price">1.449 kr. <em>pr. stk.</em></div>
+        </div>
+        <button class="add">Læg i kurv</button>
+      </div>
+
+      <div class="card">
+        <a class="ph" href="#"><img src="https://sesu.dk/wp-content/uploads/2022/04/skr%C3%A5-trapez-bordben-sort-front-og-side--scaled.jpg" alt="Sort skrå trapez bordben forfra og fra siden" loading="lazy"></a>
+        <div class="body">
+          <div class="cat">Skrå trapez · 71 cm</div>
+          <h4><a href="#">Late night black skrå trapez</a></h4>
+          <div class="dots"><i class="f-sort"></i><i class="f-messing"></i></div>
+          <div class="price">899 kr. <em>pr. stk.</em></div>
+        </div>
+        <button class="add">Læg i kurv</button>
+      </div>
+
+      <div class="card">
+        <a class="ph" href="#"><img src="https://sesu.dk/wp-content/uploads/2022/06/hairpin_messing_35cm_3_ligger_2022.jpg" alt="Messing hairpin bordben med 3 stænger, 35 cm" loading="lazy"></a>
+        <div class="body">
+          <div class="cat">Hairpin, 3 stænger · 35 cm</div>
+          <h4><a href="#">Messing hairpin bordben</a></h4>
+          <div class="dots"><i class="f-messing"></i><i class="f-sort"></i><i class="f-hvid"></i><i class="f-raw"></i></div>
+          <div class="price">250 kr. <em>pr. stk.</em></div>
+        </div>
+        <button class="add">Læg i kurv</button>
+      </div>
+
+      <div class="card">
+        <a class="ph" href="#"><img src="https://sesu.dk/wp-content/uploads/2023/09/messing-V-71cm-front.png" alt="Messing V-hairpin bordben 71 cm" loading="lazy"></a>
+        <div class="body">
+          <div class="cat">V-hairpin · 71 cm</div>
+          <h4><a href="#">Messing V-hairpin, mat</a></h4>
+          <div class="dots"><i class="f-messing"></i><i class="f-sort"></i></div>
+          <div class="price">190 kr. <em>pr. stk.</em></div>
+        </div>
+        <button class="add">Læg i kurv</button>
+      </div>
+
+      <div class="card">
+        <a class="ph" href="#"><img src="https://sesu.dk/wp-content/uploads/2023/09/sort-V-71cm-front.png" alt="Sort V-hairpin bordben 71 cm" loading="lazy"></a>
+        <div class="body">
+          <div class="cat">V-hairpin · 71 cm</div>
+          <h4><a href="#">V-hairpin bordben, sort</a></h4>
+          <div class="dots"><i class="f-sort"></i><i class="f-messing"></i></div>
+          <div class="price">180 kr. <em>pr. stk.</em></div>
+        </div>
+        <button class="add">Læg i kurv</button>
+      </div>
+
+      <div class="card">
+        <a class="ph" href="#"><img src="https://sesu.dk/wp-content/uploads/2022/08/bordben-beskytter-foedder-1.jpg" alt="Beskyttende fødder til hairpin bordben" loading="lazy"></a>
+        <div class="body">
+          <div class="cat">Tilbehør</div>
+          <h4><a href="#">Beskyttende fødder til hairpin</a></h4>
+          <div class="price">29 kr. <em>pr. sæt</em></div>
+        </div>
+        <button class="add">Læg i kurv</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="inspiration">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Bygget af kunder</h2>
+        <p class="lede" style="margin-top:15px">Genbrugsplanker, massiv eg, marmor. Tag os, når du har sat dit bord sammen — vi deler de bedste.</p>
+      </div>
+      <a class="more" href="https://www.instagram.com/sesu_dk/">@sesu_dk</a>
+    </div>
+    <div class="mosaic">
+      <a href="#"><img src="https://sesu.dk/wp-content/uploads/slider/cache/2e647f96361e20e68969434905db61de/copper-x-bordben-i-trehyttene.jpg" alt="Kobber X-bordben under træbordplade" loading="lazy"></a>
+      <a href="#"><img src="https://sesu.dk/wp-content/uploads/slider/cache/476e634f66a50760851e4912ad0cb8f8/skraa-trapez-messing-bordben-bord-i-koekken--scaled.jpg" alt="Skrå trapez i messing i et køkken" loading="lazy"></a>
+      <a href="#"><img src="https://sesu.dk/wp-content/uploads/2021/09/bordben-kobber-bruneret-messing-3-1.png" alt="Bordben i kobber, bruneret og messing" loading="lazy"></a>
+    </div>
+
+    <div class="trust">
+      <div><h4>Fri fragt over 1.000 kr.</h4><p>Til pakkeshop i hele Danmark.</p></div>
+      <div><h4>14 dages returret</h4><p>Fra den dag du modtager pakken.</p></div>
+      <div><h4>Vi svarer på telefonen</h4><p>Ring 22 22 36 21 på hverdage, hvis du er i tvivl om form eller montering.</p></div>
+      <div><h4>Nye modeller løbende</h4><p>Vi udvider sortimentet med former og farver, når vi kan.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>SESU bordben</h4>
+        <p>Siden 2015 har vi lavet bordben til spisebord, sofabord og alt derimellem. Primært i metal, i enkle former og mange farver. Sæt dit eget bord sammen og giv indretningen et præg.</p>
+        <p style="margin-top:16px">Næsbyvej 6, 4200 Slagelse<br>Telefon 22 22 36 21<br>info@sesu.dk</p>
+      </div>
+      <div>
+        <h4>Bordben</h4>
+        <a href="#">Bogstavs bordben</a><a href="#">Hairpin bordben</a><a href="#">Understel</a><a href="#">Tilbehør</a><a href="#">Tilbud</a>
+      </div>
+      <div>
+        <h4>Kundeservice</h4>
+        <a href="#">Kontakt os</a><a href="#">FAQ</a><a href="#">Handels- og leveringsbetingelser</a><a href="#">Retur og tilbagebetaling</a><a href="#">Min konto</a>
+      </div>
+      <div>
+        <h4>Nye modeller i indbakken</h4>
+        <p style="font-size:.9rem">Vi skriver kun, når der kommer nye former eller farver.</p>
+        <div class="news">
+          <label for="mail" class="skip">E-mail</label>
+          <input id="mail" type="email" placeholder="Din e-mail">
+          <button type="button">Tilmeld</button>
+        </div>
+        <div style="margin-top:18px"><a href="https://www.facebook.com/sesubordben/">Facebook</a><a href="https://www.instagram.com/sesu_dk/">Instagram</a></div>
+      </div>
+    </div>
+    <div class="legal"><span>© 2015–2026 SESU · Khaki ApS</span><span>Alle priser er inkl. moms</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var FORMS = {
+    a:      {name:'A-form',       heights:[45,71], icon:'M12 88 L50 12 L88 88', kind:'thick'},
+    u:      {name:'U-form',       heights:[45,71], icon:'M16 88 V14 H84 V88',   kind:'thick'},
+    trapez: {name:'Trapez',       heights:[45,71], icon:'M10 88 L28 14 H72 L90 88', kind:'thick'},
+    skraa:  {name:'Skrå trapez',  heights:[71],    icon:'M10 88 L30 14 H86 V88', kind:'thick'},
+    x:      {name:'X-form',       heights:[45,71], icon:'M14 14 L86 88 M86 14 L14 88', kind:'thick'},
+    hairpin:{name:'Hairpin',      heights:[35,51,71], icon:'M22 88 C24 44 40 20 50 12 C60 20 64 52 64 88', kind:'thin'},
+    v:      {name:'V-hairpin',    heights:[71],    icon:'M18 88 L50 12 L82 88', kind:'thin'}
+  };
+
+  var state = {form:'skraa', h:71, plate:3};
+
+  var formChips = document.getElementById('formChips');
+  var heightChips = document.getElementById('heightChips');
+  var plate = document.getElementById('plate');
+  var plateVal = document.getElementById('plateVal');
+  var totalEl = document.getElementById('total');
+  var verdictEl = document.getElementById('verdict');
+  var noteEl = document.getElementById('note');
+  var flagEl = document.getElementById('flag');
+  var shopLink = document.getElementById('shopLink');
+  var stage = document.getElementById('stage');
+
+  function buildFormChips(){
+    formChips.innerHTML = '';
+    Object.keys(FORMS).forEach(function(key){
+      var f = FORMS[key];
+      var b = document.createElement('button');
+      b.className = 'chip';
+      b.type = 'button';
+      b.setAttribute('aria-pressed', key === state.form);
+      b.innerHTML = '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="' + f.icon +
+        '" style="stroke-width:' + (f.kind === 'thin' ? 6 : 9) + '"/></svg>' + f.name;
+      b.addEventListener('click', function(){
+        state.form = key;
+        if (f.heights.indexOf(state.h) === -1) state.h = f.heights[f.heights.length - 1];
+        render();
+      });
+      formChips.appendChild(b);
+    });
+  }
+
+  function buildHeightChips(){
+    heightChips.innerHTML = '';
+    FORMS[state.form].heights.forEach(function(h){
+      var b = document.createElement('button');
+      b.className = 'chip';
+      b.type = 'button';
+      b.textContent = h + ' cm';
+      b.setAttribute('aria-pressed', h === state.h);
+      b.addEventListener('click', function(){ state.h = h; render(); });
+      heightChips.appendChild(b);
+    });
+  }
+
+  function advice(total){
+    if (total <= 44)  return {v:'Lavt sofabord eller plantebord', n:'Passer til en dyb sofa med lav siddehøjde. Vælg hairpin 35 cm, hvis du vil holde udtrykket let.', f:'ok'};
+    if (total <= 55)  return {v:'Sofabord', n:'Den klassiske sofabordshøjde ligger på 45–52 cm. Ram et par centimeter under sædehøjden på din sofa.', f:'ok'};
+    if (total <= 68)  return {v:'Konsolbord, sidebord eller bænk', n:'For lavt til at spise ved og for højt til sofaen. Godt som konsol bag en sofa eller i entréen.', f:'warn'};
+    if (total <= 78)  return {v:'Spisebord eller skrivebord', n:'Det behagelige interval er 74–76 cm med en stol i 45 cm siddehøjde. Du ligger inden for målet.', f:'ok'};
+    return {v:'Ståbord eller barbord', n:'Over 78 cm bliver det for højt til almindelige spisestole. Brug barstole, eller vælg en tyndere plade.', f:'warn'};
+  }
+
+  function legPath(form, x, floorY, h, w){
+    var t = x + w;
+    switch(form){
+      case 'a':      return 'M'+x+' '+floorY+' L'+(x+w/2)+' '+(floorY-h)+' L'+t+' '+floorY+
+                            ' M'+(x+w*0.19)+' '+(floorY-h*0.40)+' L'+(t-w*0.19)+' '+(floorY-h*0.40);
+      case 'u':      return 'M'+(x+w*0.12)+' '+floorY+' V'+(floorY-h)+' H'+(t-w*0.12)+' V'+floorY;
+      case 'trapez': return 'M'+x+' '+floorY+' L'+(x+w*0.22)+' '+(floorY-h)+' H'+(t-w*0.22)+' L'+t+' '+floorY;
+      case 'skraa':  return 'M'+x+' '+floorY+' L'+(x+w*0.28)+' '+(floorY-h)+' H'+t+' V'+floorY;
+      case 'x':      return 'M'+x+' '+(floorY-h)+' L'+t+' '+floorY+' M'+t+' '+(floorY-h)+' L'+x+' '+floorY+
+                            ' M'+x+' '+(floorY-h)+' H'+t;
+      case 'v':      return 'M'+x+' '+floorY+' L'+(x+w/2)+' '+(floorY-h)+' L'+t+' '+floorY;
+      case 'hairpin':return 'M'+(x+w*0.05)+' '+floorY+' C'+(x+w*0.1)+' '+(floorY-h*0.5)+' '+(x+w*0.5)+' '+(floorY-h*0.82)+' '+(x+w*0.62)+' '+(floorY-h)+
+                            ' C'+(t)+' '+(floorY-h*0.8)+' '+(t)+' '+(floorY-h*0.35)+' '+(t)+' '+floorY;
+    }
+    return '';
+  }
+
+  function drawStage(){
+    var S = 2.25;                    // px pr. cm
+    var floorY = 268;
+    var legH = state.h * S;
+    var plateH = Math.max(4, state.plate * S);
+    var topY = floorY - legH - plateH;
+    var tableL = 34, tableR = 286;
+    var legW = state.form === 'hairpin' || state.form === 'v' ? 46 : 62;
+    var inset = 26;
+    var thin = (FORMS[state.form].kind === 'thin');
+    var sw = thin ? 4 : 7;
+
+    var leftX = tableL + inset;
+    var rightX = tableR - inset - legW;
+
+    var svg = '';
+    svg += '<defs><linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">'+
+           '<stop offset="0" stop-color="#C79A62"/><stop offset="1" stop-color="#9C7343"/></linearGradient>'+
+           '<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">'+
+           '<stop offset="0" stop-color="#E3CB92"/><stop offset="0.55" stop-color="#A07C33"/>'+
+           '<stop offset="1" stop-color="#7C5F26"/></linearGradient></defs>';
+
+    // gulv
+    svg += '<line x1="0" y1="'+floorY+'" x2="420" y2="'+floorY+'" stroke="#3A3D41" stroke-width="1.5"/>';
+
+    // stol som skalareference
+    var seatY = floorY - 45*S, backY = floorY - 88*S;
+    svg += '<g stroke="#4A4E52" stroke-width="3.5" fill="none" stroke-linecap="round">'+
+           '<line x1="318" y1="'+seatY+'" x2="386" y2="'+seatY+'"/>'+
+           '<line x1="324" y1="'+seatY+'" x2="324" y2="'+floorY+'"/>'+
+           '<line x1="380" y1="'+seatY+'" x2="380" y2="'+floorY+'"/>'+
+           '<line x1="380" y1="'+seatY+'" x2="380" y2="'+backY+'"/>'+
+           '<line x1="380" y1="'+backY+'" x2="330" y2="'+(backY+3)+'"/>'+
+           '</g>';
+
+    // ben — venstre tegnes direkte, højre spejlvendes om sin egen midte
+    var p1 = legPath(state.form, leftX, floorY, legH, legW);
+    var p2 = legPath(state.form, rightX, floorY, legH, legW);
+    svg += '<g stroke="url(#metal)" stroke-width="'+sw+'" fill="none" stroke-linejoin="miter" stroke-linecap="butt">';
+    svg += '<path d="'+p1+'"/>';
+    svg += '<g transform="translate('+(2*rightX+legW)+',0) scale(-1,1)"><path d="'+p2+'"/></g>';
+    svg += '</g>';
+
+    // bordplade
+    svg += '<rect x="'+tableL+'" y="'+topY+'" width="'+(tableR-tableL)+'" height="'+plateH+'" fill="url(#wood)" rx="1"/>';
+    svg += '<rect x="'+tableL+'" y="'+topY+'" width="'+(tableR-tableL)+'" height="'+Math.max(2,plateH*0.22)+'" fill="rgba(255,255,255,.18)"/>';
+
+    // målsætning
+    var total = state.h + state.plate;
+    svg += '<g stroke="#6C6F72" stroke-width="1" fill="none">'+
+           '<line x1="16" y1="'+topY+'" x2="16" y2="'+floorY+'"/>'+
+           '<line x1="11" y1="'+topY+'" x2="21" y2="'+topY+'"/>'+
+           '<line x1="11" y1="'+floorY+'" x2="21" y2="'+floorY+'"/></g>';
+    svg += '<text x="22" y="'+((topY+floorY)/2)+'" fill="#A5A7A5" font-size="12" font-family="Instrument Sans, sans-serif" dominant-baseline="middle">'+
+           String(total).replace('.',',')+' cm</text>';
+    svg += '<text x="318" y="'+(floorY+18)+'" fill="#6C6F72" font-size="11" font-family="Instrument Sans, sans-serif">stol, 45 cm</text>';
+
+    stage.innerHTML = '<title id="stageTitle">Bord med '+FORMS[state.form].name+' i '+state.h+
+      ' cm og '+state.plate.toFixed(1).replace('.',',')+' cm plade, i alt '+
+      total.toFixed(1).replace('.',',')+' cm</title>' + svg;
+  }
+
+  function render(){
+    Array.prototype.forEach.call(formChips.children, function(b, i){
+      b.setAttribute('aria-pressed', Object.keys(FORMS)[i] === state.form);
+    });
+    buildHeightChips();
+    plateVal.textContent = state.plate.toFixed(1).replace('.',',') + ' cm';
+
+    var total = Math.round((state.h + state.plate) * 10) / 10;
+    totalEl.innerHTML = total.toFixed(1).replace('.',',') + '<span>cm i alt</span>';
+
+    var a = advice(total);
+    verdictEl.textContent = a.v;
+    noteEl.textContent = a.n;
+    flagEl.textContent = a.f === 'ok' ? 'Højden passer til formålet' : 'Tjek højden en ekstra gang';
+    flagEl.className = 'flag ' + a.f;
+    shopLink.textContent = 'Se ' + FORMS[state.form].name + ' i ' + state.h + ' cm';
+
+    drawStage();
+  }
+
+  plate.addEventListener('input', function(){ state.plate = parseFloat(plate.value); render(); });
+  buildFormChips();
+  render();
+})();
+</script>
+</body>
+</html>
