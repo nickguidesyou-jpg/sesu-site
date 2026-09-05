@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hvor høj skal et bord være? Beregn din bordhøjde | SESU bordben</title>
+<meta name="description" content="Et spisebord skal være 74–76 cm højt, et sofabord 42–52 cm. Beregn hvilken benhøjde du skal bruge til din bordplade — og se hvilke bordben der passer.">
+<link rel="canonical" href="https://sesu.dk/bordhoejde/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141517;--ink-2:#1B1D1F;--soft:#55595D;--concrete:#8B8D89;
+  --line:#DAD9D3;--line-dark:#33363A;--paper:#F0EFEB;--white:#FBFBF9;
+  --brass:#A07C33;--brass-lit:#D3B677;--green:#3C6B4A;--warn:#A25E38;
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Instrument Sans",system-ui,-apple-system,sans-serif;
+  font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased;padding-bottom:0}
+h1,h2,h3,h4{font-family:"Archivo",system-ui,sans-serif;font-weight:700;
+  font-variation-settings:"wdth" 112;letter-spacing:-.024em;line-height:1.05;margin:0}
+h1{font-size:clamp(2.2rem,5.2vw,3.9rem);font-variation-settings:"wdth" 118;font-weight:800}
+h2{font-size:clamp(1.6rem,3.2vw,2.4rem)}
+h3{font-size:1.2rem;font-variation-settings:"wdth" 106}
+h4{font-size:1rem;font-variation-settings:"wdth" 104}
+p{margin:0 0 1em}
+a{color:inherit}
+img{display:block;max-width:100%}
+button{font:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.lede{font-size:1.1rem;color:var(--soft);max-width:60ch}
+:focus-visible{outline:2.5px solid var(--brass);outline-offset:3px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;background:var(--ink);color:#fff;padding:10px 16px;z-index:99}
+section{padding:74px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;
+  font-weight:600;font-size:.96rem;padding:15px 26px;border-radius:2px;border:1.5px solid transparent;cursor:pointer;transition:.18s}
+.btn-brass{background:var(--brass);color:#15140F;border-color:var(--brass)}
+.btn-brass:hover{background:var(--brass-lit);border-color:var(--brass-lit)}
+.btn-dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-dark:hover{background:#000}
+.btn-line{border-color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+
+/* header */
+.utility{background:var(--ink);color:#CFCEC8;font-size:.8rem}
+.utility .wrap{display:flex;gap:30px;justify-content:center;padding:9px 24px;flex-wrap:wrap}
+.utility b{color:var(--brass-lit);font-weight:600}
+header.site{position:sticky;top:0;z-index:50;background:rgba(240,239,235,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:30px;padding:15px 24px;max-width:var(--maxw);margin:0 auto}
+.logo{font-family:"Archivo";font-variation-settings:"wdth" 124;font-weight:900;font-size:1.45rem;
+  text-decoration:none;line-height:1}
+.logo small{display:block;font-family:"Instrument Sans";font-weight:500;font-size:.57rem;
+  letter-spacing:.36em;color:var(--concrete);margin-top:3px}
+nav.main{display:flex;gap:24px;margin-left:auto;font-size:.93rem;font-weight:500}
+nav.main a{text-decoration:none;padding:5px 0;border-bottom:2px solid transparent}
+nav.main a:hover,nav.main a[aria-current]{border-color:var(--brass)}
+.cart{display:flex;gap:7px;font-size:.92rem;font-weight:600;text-decoration:none;
+  border:1.5px solid var(--ink);padding:9px 16px;border-radius:2px}
+.cart:hover{background:var(--ink);color:var(--paper)}
+.burger{display:none;background:none;border:1.5px solid var(--ink);border-radius:2px;padding:9px 13px;margin-left:auto;cursor:pointer;font-size:.9rem}
+.crumbs{font-size:.85rem;color:var(--concrete);padding:18px 0 0}
+.crumbs a{text-decoration:none}
+
+/* intro */
+.intro{padding:34px 0 56px}
+.answer{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-top:34px}
+.answer div{background:var(--white);padding:20px}
+.answer strong{display:block;font-family:"Archivo";font-variation-settings:"wdth" 116;
+  font-weight:800;font-size:1.75rem;letter-spacing:-.03em;line-height:1}
+.answer span{font-size:.88rem;color:var(--soft);display:block;margin-top:5px}
+
+/* builder */
+.builder{background:var(--ink);color:var(--paper)}
+.builder h2{color:#fff}
+.builder .lede{color:#A2A4A2}
+.b-grid{display:grid;grid-template-columns:.92fr 1.08fr;
+  border:1px solid var(--line-dark);border-radius:3px;overflow:hidden;background:var(--ink-2);margin-top:34px}
+.b-controls{padding:32px}
+.b-stage{padding:26px 30px 22px;background:#0F1012;border-left:1px solid var(--line-dark);display:flex;flex-direction:column}
+.step{margin-bottom:26px}
+.step>label{display:flex;align-items:center;gap:9px;font-size:.82rem;color:#8E908E;margin-bottom:11px;font-weight:500}
+.step>label i{font-style:normal;width:19px;height:19px;border-radius:50%;border:1px solid #4A4D51;
+  display:grid;place-items:center;font-size:.7rem;color:#B8BAB8}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:transparent;border:1.5px solid #3A3D41;color:#DCDCD8;padding:9px 14px;border-radius:2px;
+  font-size:.9rem;font-weight:500;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px}
+.chip:hover{border-color:#70747A}
+.chip[aria-pressed="true"]{background:var(--brass);border-color:var(--brass);color:#15140F}
+.chip svg{width:19px;height:19px;overflow:visible}
+.chip svg path{stroke:currentColor;fill:none}
+.slider-row{display:flex;align-items:center;gap:16px}
+input[type=range]{flex:1;accent-color:var(--brass);height:26px}
+.plate-val{font-family:"Archivo";font-variation-settings:"wdth" 108;font-weight:700;font-size:1.1rem;min-width:72px;text-align:right}
+.hint{font-size:.83rem;color:#7E817E;margin:9px 0 0}
+.b-stage svg{width:100%;height:auto;flex:1}
+.stage-cap{font-size:.82rem;color:#7C7E7C;text-align:center;margin-top:6px}
+
+/* result */
+.result{border-top:1px solid var(--line-dark);padding-top:24px}
+.result .kicker{font-size:.82rem;color:#8E908E}
+.result .big{font-family:"Archivo";font-variation-settings:"wdth" 118;font-weight:800;
+  font-size:clamp(2.6rem,6vw,3.6rem);line-height:.96;letter-spacing:-.035em;color:#fff;margin-top:6px}
+.result .big span{font-size:1.15rem;font-weight:600;letter-spacing:0;margin-left:8px;color:var(--brass-lit)}
+.result p.note{font-size:.93rem;color:#9B9D9B;margin:12px 0 0}
+.flag{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:.86rem;padding:7px 12px;border-radius:2px}
+.flag.ok{background:rgba(60,107,74,.24);color:#8FC49E}
+.flag.warn{background:rgba(162,94,56,.22);color:#E0A47D}
+
+/* picks */
+.picks{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pickhead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.qty{display:flex;align-items:center;gap:10px;font-size:.92rem}
+.qty button{width:38px;height:38px;border:1.5px solid var(--ink);background:none;border-radius:2px;cursor:pointer;font-size:1.1rem;line-height:1}
+.qty button:hover{background:var(--ink);color:var(--paper)}
+.qty output{font-family:"Archivo";font-weight:700;font-size:1.15rem;min-width:22px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:3px;display:flex;flex-direction:column;
+  position:relative;transition:border-color .18s,box-shadow .22s,transform .22s}
+.card:hover{border-color:#B7B6AF;box-shadow:0 14px 28px rgba(20,21,23,.09);transform:translateY(-3px)}
+.card.best{border-color:var(--brass);border-width:1.5px}
+.badge{position:absolute;top:12px;left:12px;z-index:2;font-size:.72rem;font-weight:600;padding:5px 9px;
+  border-radius:2px;background:var(--brass);color:#15140F}
+.card .ph{aspect-ratio:4/3;background:#fff;display:flex;align-items:center;justify-content:center;padding:18px;border-bottom:1px solid var(--line)}
+.card .ph img{max-height:100%;width:auto;object-fit:contain;mix-blend-mode:multiply}
+.card .body{padding:16px 17px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cat{font-size:.78rem;color:var(--concrete)}
+.card h4 a{text-decoration:none}
+.linetotal{margin-top:auto;display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.linetotal b{font-family:"Archivo";font-variation-settings:"wdth" 108;font-weight:700;font-size:1.2rem}
+.linetotal em{font-style:normal;font-size:.82rem;color:var(--concrete)}
+.stock{font-size:.83rem;color:var(--green);display:flex;align-items:center;gap:6px}
+.stock i{width:7px;height:7px;border-radius:50%;background:var(--green);display:block}
+.add{margin:0 17px 17px;font-weight:600;font-size:.92rem;padding:13px;background:var(--ink);color:var(--paper);
+  border:0;border-radius:2px;cursor:pointer;transition:background .18s}
+.add:hover{background:var(--brass);color:#15140F}
+.card.best .add{background:var(--brass);color:#15140F}
+.card.best .add:hover{background:var(--brass-lit)}
+.emptypick{grid-column:1/-1;border:1px dashed var(--line);padding:34px;text-align:center;border-radius:3px;background:var(--paper)}
+
+/* shipping meter */
+.meter{margin-top:26px;border:1px solid var(--line);background:var(--paper);border-radius:3px;padding:18px 20px}
+.meter .track{height:7px;background:#DEDDD7;border-radius:99px;overflow:hidden;margin-top:11px}
+.meter .fill{height:100%;background:var(--brass);width:0;transition:width .4s cubic-bezier(.3,.7,.3,1)}
+.meter p{margin:0;font-size:.93rem}
+.meter b{font-weight:600}
+
+/* table */
+.tbl{width:100%;border-collapse:collapse;font-size:.96rem;margin-top:26px;background:var(--white)}
+.tbl th,.tbl td{text-align:left;padding:14px 14px;border-bottom:1px solid var(--line)}
+.tbl th{font-weight:600;font-size:.82rem;color:var(--concrete);border-bottom:1.5px solid var(--ink)}
+.tbl td:first-child{font-weight:600}
+.tbl tr:hover td{background:var(--paper)}
+
+/* faq */
+.faq{max-width:820px}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;padding:17px 0;font-weight:600;font-size:1.04rem;list-style:none;
+  display:flex;justify-content:space-between;gap:18px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:"Archivo";font-weight:700;font-size:1.3rem;color:var(--brass);transition:transform .2s}
+details[open] summary::after{content:"–"}
+details p{color:var(--soft);margin:0 0 18px;max-width:68ch}
+
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;padding:44px 0;border-top:1px solid var(--line)}
+.trust h4{margin-bottom:6px}
+.trust p{font-size:.92rem;color:var(--soft);margin:0}
+
+/* sticky mobile cta */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);color:var(--paper);
+  padding:11px 16px;display:none;align-items:center;gap:14px;box-shadow:0 -6px 22px rgba(0,0,0,.22)}
+.sticky .s-l{flex:1;min-width:0}
+.sticky .s-l strong{display:block;font-size:.95rem;font-weight:600}
+.sticky .s-l span{font-size:.8rem;color:#9B9D9B}
+.sticky .btn{padding:13px 20px}
+
+/* footer */
+footer{background:var(--ink);color:#C4C4C0;padding:62px 0 30px;font-size:.93rem}
+footer h4{color:#fff;margin-bottom:14px}
+.fgrid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.2fr;gap:42px}
+footer a{text-decoration:none;display:block;padding:4px 0}
+footer a:hover{color:var(--brass-lit)}
+.legal{border-top:1px solid #2C2F32;margin-top:46px;padding-top:22px;display:flex;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;font-size:.85rem;color:#82847F}
+
+@media(max-width:1020px){
+  .b-grid{grid-template-columns:1fr}
+  .b-stage{border-left:0;border-top:1px solid var(--line-dark)}
+  .answer{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:1fr 1fr}
+  .trust{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr 1fr}
+  nav.main{display:none}.burger{display:block}.cart span{display:none}
+  section{padding:56px 0}
+}
+@media(max-width:640px){
+  .grid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .b-controls,.b-stage{padding:22px 18px}
+  .sticky{display:flex}
+  body{padding-bottom:78px}
+  .tbl th:nth-child(3),.tbl td:nth-child(3){display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Gå til indhold</a>
+
+<div class="utility"><div class="wrap">
+  <span><b>Fri fragt</b> til pakkeshop over 1.000 kr.</span>
+  <span>14 dages returret</span>
+  <span>Dansk lager · afsendes alle hverdage</span>
+</div></div>
+
+<header class="site"><div class="bar">
+  <a class="logo" href="/">SESU<small>BORDBEN</small></a>
+  <nav class="main">
+    <a href="/bogstavs-bordben/">Bogstavs bordben</a>
+    <a href="/hairpin-bordben/">Hairpin</a>
+    <a href="/understel-bordben/">Understel</a>
+    <a href="/tilbehoer/">Tilbehør</a>
+    <a href="/bordhoejde/" aria-current="page">Bordhøjde</a>
+  </nav>
+  <button class="burger" aria-label="Åbn menu">Menu</button>
+  <a class="cart" href="/kurv/">Kurv <span>(0)</span></a>
+</div></header>
+
+<main id="main">
+
+<div class="wrap crumbs"><a href="/">Forside</a> / Bordhøjde</div>
+
+<div class="wrap intro">
+  <h1>Hvor høj skal dit bord være?</h1>
+  <p class="lede" style="margin-top:20px">Et spisebord er behageligt ved 74–76 cm, et sofabord ved 42–52 cm. Men det tal gælder det færdige bord — bordpladen tæller med. Vælg hvad bordet skal bruges til, og hvor tyk din plade er, så regner vi benhøjden ud og viser hvilke ben der passer.</p>
+  <div class="answer">
+    <div><strong>74–76 cm</strong><span>Spisebord</span></div>
+    <div><strong>72–75 cm</strong><span>Skrivebord</span></div>
+    <div><strong>42–52 cm</strong><span>Sofabord</span></div>
+    <div><strong>45–48 cm</strong><span>Bænk og siddemøbel</span></div>
+  </div>
+</div>
+
+<section class="builder" id="beregner">
+  <div class="wrap">
+    <h2>Beregn din benhøjde</h2>
+    <p class="lede" style="margin-top:14px">Tre valg. Bordet tegnes i skala, mens du skruer på det.</p>
+
+    <div class="b-grid">
+      <div class="b-controls">
+        <div class="step">
+          <label id="l1"><i>1</i>Hvad skal bordet bruges til?</label>
+          <div class="chips" id="useChips" role="group" aria-labelledby="l1"></div>
+        </div>
+
+        <div class="step">
+          <label for="plate"><i>2</i>Hvor tyk er din bordplade?</label>
+          <div class="slider-row">
+            <input id="plate" type="range" min="1.5" max="8" step="0.5" value="3">
+            <span class="plate-val" id="plateVal">3,0 cm</span>
+          </div>
+          <p class="hint" id="plateHint">Massiv eg i plankebord ligger typisk på 3–4 cm. Finérplade og laminat på 1,8–2,5 cm.</p>
+        </div>
+
+        <div class="step">
+          <label id="l3"><i>3</i>Hvilken form vil du have?</label>
+          <div class="chips" id="formChips" role="group" aria-labelledby="l3"></div>
+          <p class="hint" id="formHint"></p>
+        </div>
+
+        <div class="result">
+          <div class="kicker">Du skal bruge bordben på</div>
+          <div class="big" id="legOut">71<span>cm</span></div>
+          <p class="note" id="note"></p>
+          <span class="flag ok" id="flag"></span>
+        </div>
+      </div>
+
+      <div class="b-stage">
+        <svg id="stage" viewBox="0 0 420 300" role="img" aria-labelledby="stageTitle">
+          <title id="stageTitle">Skalategning af bordet</title>
+        </svg>
+        <div class="stage-cap">Tegnet i skala. Stolen viser en almindelig siddehøjde på 45 cm.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="picks" id="anbefaling">
+  <div class="wrap">
+    <div class="pickhead">
+      <div>
+        <h2 id="pickTitle">Ben der passer</h2>
+        <p class="lede" style="margin-top:12px" id="pickSub"></p>
+      </div>
+      <div>
+        <div style="font-size:.82rem;color:var(--concrete);margin-bottom:8px">Antal ben</div>
+        <div class="qty">
+          <button type="button" id="qMinus" aria-label="Færre ben">−</button>
+          <output id="qOut" aria-live="polite">2</output>
+          <button type="button" id="qPlus" aria-label="Flere ben">+</button>
+          <span style="color:var(--soft)" id="qHint">til et bord med to endeben</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" id="pickGrid"></div>
+
+    <div class="meter">
+      <p><b id="meterHead">Fri fragt</b> <span id="meterText"></span></p>
+      <div class="track"><div class="fill" id="meterFill"></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Standardhøjder, hvis du bare vil have tallet</h2>
+    <p class="lede" style="margin-top:14px">Målene er den færdige bordhøjde inklusive plade. Træk pladens tykkelse fra, så har du benhøjden.</p>
+    <table class="tbl">
+      <thead><tr><th>Bordtype</th><th>Færdig højde</th><th>Typisk benhøjde hos os</th><th>Former</th></tr></thead>
+      <tbody>
+        <tr><td>Spisebord</td><td>74–76 cm</td><td>71 cm + 3 cm plade</td><td>A, U, X, trapez, skrå trapez, hairpin</td></tr>
+        <tr><td>Skrivebord</td><td>72–75 cm</td><td>71 cm + 2 cm plade</td><td>A, U, X, trapez, hairpin</td></tr>
+        <tr><td>Konsol og entrébord</td><td>75–85 cm</td><td>71 cm + tyk plade</td><td>U, trapez, skrå trapez</td></tr>
+        <tr><td>Sidebord og natbord</td><td>52–60 cm</td><td>51 cm hairpin</td><td>Hairpin, 2 og 3 stænger</td></tr>
+        <tr><td>Bænk</td><td>45–48 cm</td><td>45 cm</td><td>A, U fat, trapez, X</td></tr>
+        <tr><td>Sofabord</td><td>42–52 cm</td><td>45 cm eller 35 cm hairpin</td><td>A, U, trapez, X, hairpin</td></tr>
+        <tr><td>Lavt sofabord og plantebord</td><td>36–42 cm</td><td>35 cm hairpin</td><td>Hairpin, 2 og 3 stænger</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap faq">
+    <h2>Spørgsmål vi får hver uge</h2>
+    <div style="margin-top:26px">
+      <details open>
+        <summary>Måler I benhøjden med eller uden bordplade?</summary>
+        <p>Uden. Alle højder på siden er benets egen højde fra gulv til monteringsflade. Den færdige bordhøjde er benhøjden plus din plades tykkelse. Bruger du filtpuder under benene, kommer der yderligere 2–4 mm.</p>
+      </details>
+      <details>
+        <summary>Hvor mange ben skal jeg bruge?</summary>
+        <p>To ben er nok til A, U, X, trapez og skrå trapez op til cirka 200 cm bordlængde — de er brede og står selv. Hairpin og V-hairpin er enkeltben, så der skal fire til. Er pladen længere end 220 cm eller tyndere end 2,5 cm, bør du sætte et ekstra ben eller en tværstiver i midten.</p>
+      </details>
+      <details>
+        <summary>Hvor tyk skal bordpladen være?</summary>
+        <p>Til et spisebord anbefaler vi mindst 2,5 cm i massivt træ, og 3–4 cm hvis bordet er over 180 cm langt. Til sofaborde og sidebord kan du gå ned til 1,8 cm. Jo tyndere plade, jo tættere skal benene sidde på hinanden.</p>
+      </details>
+      <details>
+        <summary>Kan jeg justere højden bagefter?</summary>
+        <p>Kun få millimeter. Filtpuder og beskyttende fødder giver 2–4 mm og kan bruges til at rette et bord op på et skævt gulv. Skal du længere op eller ned, skal du vælge en anden benhøjde — så mål efter, inden du bestiller.</p>
+      </details>
+      <details>
+        <summary>Følger skruer med?</summary>
+        <p>Benene leveres med formonterede huller til montering. Skruer, filtpuder og fødder køber du under tilbehør, så du kan vælge længde efter din plade. Til en 3 cm plade passer 16–20 mm skruer.</p>
+      </details>
+      <details>
+        <summary>Hvor lang tid tager levering?</summary>
+        <p>Vi sender fra eget lager alle hverdage. Bestiller du inden kl. 14 på en hverdag, ryger pakken afsted samme dag, og du har den normalt inden for 1–3 hverdage. Fri fragt til pakkeshop over 1.000 kr., og 14 dages returret fra du modtager pakken.</p>
+      </details>
+    </div>
+
+    <div class="trust">
+      <div><h4>Fri fragt over 1.000 kr.</h4><p>Til pakkeshop i hele Danmark.</p></div>
+      <div><h4>14 dages returret</h4><p>Fra den dag du modtager pakken.</p></div>
+      <div><h4>Vi svarer på telefonen</h4><p>Ring 22 22 36 21 på hverdage, hvis du er i tvivl om mål.</p></div>
+      <div><h4>Bordben siden 2015</h4><p>Eget lager i Slagelse, dansk kundeservice.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="sticky" id="sticky">
+  <div class="s-l">
+    <strong id="stickyTitle">71 cm bordben</strong>
+    <span id="stickySub">Vælg en model nedenfor</span>
+  </div>
+  <a class="btn btn-brass" href="#anbefaling">Se ben</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>SESU bordben</h4>
+        <p>Siden 2015 har vi lavet bordben til spisebord, sofabord og alt derimellem. Primært i metal, i enkle former og mange farver.</p>
+        <p style="margin-top:16px">Næsbyvej 6, 4200 Slagelse<br>Telefon 22 22 36 21<br>info@sesu.dk</p>
+      </div>
+      <div><h4>Bordben</h4>
+        <a href="/bogstavs-bordben/">Bogstavs bordben</a><a href="/hairpin-bordben/">Hairpin bordben</a>
+        <a href="/understel-bordben/">Understel</a><a href="/tilbehoer/">Tilbehør</a><a href="/tilbud/">Tilbud</a></div>
+      <div><h4>Guides</h4>
+        <a href="/bordhoejde/">Bordhøjde</a><a href="#">Vælg den rigtige form</a>
+        <a href="#">Montering af bordben</a><a href="#">Pleje af messing og kobber</a></div>
+      <div><h4>Kundeservice</h4>
+        <a href="/kontakt-os">Kontakt os</a><a href="/faq-page/">FAQ</a>
+        <a href="/betingelser/">Handels- og leveringsbetingelser</a><a href="/returret/">Retur og tilbagebetaling</a></div>
+    </div>
+    <div class="legal"><span>© 2015–2026 SESU · Khaki ApS</span><span>Alle priser er inkl. moms</span></div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Hvor høj skal et spisebord være?","acceptedAnswer":{"@type":"Answer","text":"Et spisebord er behageligt ved 74-76 cm i færdig højde inklusive bordplade. Med en 3 cm plade svarer det til bordben på 71 cm."}},
+{"@type":"Question","name":"Hvor høj skal et sofabord være?","acceptedAnswer":{"@type":"Answer","text":"Et sofabord ligger typisk på 42-52 cm. Ram et par centimeter under sofaens siddehøjde. Med en 3 cm plade svarer det til bordben på 45 cm, eller 35 cm hairpin til et lavt bord."}},
+{"@type":"Question","name":"Måles benhøjden med eller uden bordplade?","acceptedAnswer":{"@type":"Answer","text":"Uden. Benhøjden er målt fra gulv til monteringsflade. Den færdige bordhøjde er benhøjden plus pladens tykkelse."}},
+{"@type":"Question","name":"Hvor mange bordben skal jeg bruge?","acceptedAnswer":{"@type":"Answer","text":"To ben er nok til A, U, X, trapez og skrå trapez op til cirka 200 cm bordlængde. Hairpin og V-hairpin er enkeltben, så der skal fire til."}}]}
+</script>
+
+<script>
+(function(){
+  var HEIGHTS = [35,45,51,71];
+
+  var USES = {
+    spise:  {name:'Spisebord',  ideal:75, min:73, max:77, qty:2},
+    skrive: {name:'Skrivebord', ideal:74, min:72, max:76, qty:2},
+    sofa:   {name:'Sofabord',   ideal:48, min:42, max:52, qty:4},
+    side:   {name:'Sidebord',   ideal:56, min:50, max:62, qty:4},
+    baenk:  {name:'Bænk',       ideal:46, min:44, max:48, qty:2}
+  };
+
+  var FORMS = {
+    a:      {name:'A-form',      heights:[45,71],    icon:'M12 88 L50 12 L88 88 M23 58 H77', sw:9, per:2},
+    u:      {name:'U-form',      heights:[45,71],    icon:'M16 88 V14 H84 V88', sw:9, per:2},
+    trapez: {name:'Trapez',      heights:[45,71],    icon:'M10 88 L28 14 H72 L90 88', sw:9, per:2},
+    skraa:  {name:'Skrå trapez', heights:[71],       icon:'M10 88 L30 14 H86 V88', sw:9, per:2},
+    x:      {name:'X-form',      heights:[45,71],    icon:'M14 14 L86 88 M86 14 L14 88 M14 12 H86', sw:9, per:2},
+    hairpin:{name:'Hairpin',     heights:[35,51,71], icon:'M22 88 C24 44 40 20 50 12 C60 20 64 52 64 88', sw:6, per:4},
+    v:      {name:'V-hairpin',   heights:[71],       icon:'M18 88 L50 12 L82 88', sw:6, per:4}
+  };
+
+  /* Priser og billeder hentet fra sesu.dk. Udvid med resten af sortimentet. */
+  var PRODUCTS = [
+    {form:'skraa', h:71, name:'Messing skrå trapez', finish:'Messing, mat', price:1449,
+     img:'https://sesu.dk/wp-content/uploads/2022/04/skraa_trapez_messing_71cm_side_4.png', url:'/messing-skraa-trapez-71cm/'},
+    {form:'skraa', h:71, name:'Late night black skrå trapez', finish:'Mat sort', price:899,
+     img:'https://sesu.dk/wp-content/uploads/2022/04/skr%C3%A5-trapez-bordben-sort-front-og-side--scaled.jpg', url:'/late-night-black-skraa-trapez-71cm/'},
+    {form:'a', h:71, name:'Dark messing A-bordben', finish:'Bruneret messing', price:1349,
+     img:'https://sesu.dk/wp-content/uploads/2021/09/products-a-bordben-71-burneret-messing-front.png', url:'/dark-messing-a-formede-bordben-71cm/'},
+    {form:'x', h:71, name:'Dark messing X-bordben', finish:'Bruneret messing', price:1349,
+     img:'https://sesu.dk/wp-content/uploads/2020/07/burneret-messing-x-bordben-71cm-front.png', url:'/dark-messing-x-formede-bordben-71cm/'},
+    {form:'v', h:71, name:'Messing V-hairpin', finish:'Messing, mat', price:190,
+     img:'https://sesu.dk/wp-content/uploads/2023/09/messing-V-71cm-front.png', url:'/messing-v-hairpin-bordben-71cm-mat/'},
+    {form:'v', h:71, name:'V-hairpin bordben, sort', finish:'Mat sort', price:180,
+     img:'https://sesu.dk/wp-content/uploads/2023/09/sort-V-71cm-front.png', url:'/v-hairpin-bordben-black-71cm/'},
+    {form:'hairpin', h:35, name:'Messing hairpin, 3 stænger', finish:'Messing, mat', price:250,
+     img:'https://sesu.dk/wp-content/uploads/2022/06/hairpin_messing_35cm_3_ligger_2022.jpg', url:'/messing-35cm-3-staenger-hairpin-bordben/'}
+  ];
+
+  var FREE_SHIP = 1000;
+  var state = {use:'spise', plate:3, form:'skraa', leg:71, qty:2, qtyTouched:false};
+
+  var $ = function(id){ return document.getElementById(id); };
+  var useChips=$('useChips'), formChips=$('formChips'), plate=$('plate');
+
+  function kr(n){ return n.toLocaleString('da-DK') + ' kr.'; }
+  function cm(n){ return n.toFixed(1).replace('.',',').replace(',0',''); }
+
+  function nearest(target, list){
+    return list.reduce(function(best,h){
+      return Math.abs(h-target) < Math.abs(best-target) ? h : best;
+    }, list[0]);
+  }
+
+  function buildChips(el, obj, key, onPick){
+    el.innerHTML = '';
+    Object.keys(obj).forEach(function(k){
+      var o = obj[k], b = document.createElement('button');
+      b.type='button'; b.className='chip'; b.dataset.k = k;
+      b.innerHTML = (o.icon ? '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="'+o.icon+'" style="stroke-width:'+o.sw+'"/></svg>' : '') + o.name;
+      b.addEventListener('click', function(){ onPick(k); });
+      el.appendChild(b);
+    });
+  }
+
+  function legPath(form,x,floorY,h,w){
+    var t=x+w;
+    switch(form){
+      case 'a':      return 'M'+x+' '+floorY+' L'+(x+w/2)+' '+(floorY-h)+' L'+t+' '+floorY+
+                            ' M'+(x+w*0.19)+' '+(floorY-h*0.40)+' L'+(t-w*0.19)+' '+(floorY-h*0.40);
+      case 'u':      return 'M'+(x+w*0.12)+' '+floorY+' V'+(floorY-h)+' H'+(t-w*0.12)+' V'+floorY;
+      case 'trapez': return 'M'+x+' '+floorY+' L'+(x+w*0.22)+' '+(floorY-h)+' H'+(t-w*0.22)+' L'+t+' '+floorY;
+      case 'skraa':  return 'M'+x+' '+floorY+' L'+(x+w*0.28)+' '+(floorY-h)+' H'+t+' V'+floorY;
+      case 'x':      return 'M'+x+' '+(floorY-h)+' L'+t+' '+floorY+' M'+t+' '+(floorY-h)+' L'+x+' '+floorY+
+                            ' M'+x+' '+(floorY-h)+' H'+t;
+      case 'v':      return 'M'+x+' '+floorY+' L'+(x+w/2)+' '+(floorY-h)+' L'+t+' '+floorY;
+      case 'hairpin':return 'M'+(x+w*0.05)+' '+floorY+' C'+(x+w*0.1)+' '+(floorY-h*0.5)+' '+(x+w*0.5)+' '+(floorY-h*0.82)+' '+(x+w*0.62)+' '+(floorY-h)+
+                            ' C'+t+' '+(floorY-h*0.8)+' '+t+' '+(floorY-h*0.35)+' '+t+' '+floorY;
+    }
+    return '';
+  }
+
+  function drawStage(total){
+    var S=2.25, floorY=268, stage=$('stage');
+    var legH=state.leg*S, plateH=Math.max(4,state.plate*S), topY=floorY-legH-plateH;
+    var tableL=34, tableR=286;
+    var f=FORMS[state.form], thin=f.sw<8, sw=thin?4:7;
+    var legW=thin?46:62, inset=26;
+    var leftX=tableL+inset, rightX=tableR-inset-legW;
+    var seatY=floorY-45*S, backY=floorY-88*S;
+    var s='';
+
+    s+='<defs><linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">'+
+       '<stop offset="0" stop-color="#C79A62"/><stop offset="1" stop-color="#966E40"/></linearGradient>'+
+       '<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">'+
+       '<stop offset="0" stop-color="#E3CB92"/><stop offset=".55" stop-color="#A07C33"/>'+
+       '<stop offset="1" stop-color="#7C5F26"/></linearGradient></defs>';
+
+    s+='<line x1="0" y1="'+floorY+'" x2="420" y2="'+floorY+'" stroke="#3A3D41" stroke-width="1.5"/>';
+
+    s+='<g stroke="#474B4F" stroke-width="3.5" fill="none" stroke-linecap="round">'+
+       '<line x1="318" y1="'+seatY+'" x2="386" y2="'+seatY+'"/>'+
+       '<line x1="324" y1="'+seatY+'" x2="324" y2="'+floorY+'"/>'+
+       '<line x1="380" y1="'+seatY+'" x2="380" y2="'+floorY+'"/>'+
+       '<line x1="380" y1="'+seatY+'" x2="380" y2="'+backY+'"/>'+
+       '<line x1="380" y1="'+backY+'" x2="332" y2="'+(backY+3)+'"/></g>';
+    s+='<text x="316" y="'+(floorY+18)+'" fill="#6C6F72" font-size="11" font-family="Instrument Sans, sans-serif">stol, 45 cm</text>';
+
+    s+='<g stroke="url(#metal)" stroke-width="'+sw+'" fill="none" stroke-linejoin="miter">'+
+       '<path d="'+legPath(state.form,leftX,floorY,legH,legW)+'"/>'+
+       '<g transform="translate('+(2*rightX+legW)+',0) scale(-1,1)">'+
+       '<path d="'+legPath(state.form,rightX,floorY,legH,legW)+'"/></g></g>';
+
+    s+='<rect x="'+tableL+'" y="'+topY+'" width="'+(tableR-tableL)+'" height="'+plateH+'" fill="url(#wood)"/>'+
+       '<rect x="'+tableL+'" y="'+topY+'" width="'+(tableR-tableL)+'" height="'+Math.max(2,plateH*0.2)+'" fill="rgba(255,255,255,.2)"/>';
+
+    s+='<g stroke="#6C6F72" stroke-width="1" fill="none">'+
+       '<line x1="16" y1="'+topY+'" x2="16" y2="'+floorY+'"/>'+
+       '<line x1="11" y1="'+topY+'" x2="21" y2="'+topY+'"/>'+
+       '<line x1="11" y1="'+floorY+'" x2="21" y2="'+floorY+'"/></g>'+
+       '<text x="24" y="'+((topY+floorY)/2)+'" fill="#A5A7A5" font-size="12.5" font-family="Instrument Sans, sans-serif" dominant-baseline="middle">'+cm(total)+' cm</text>';
+
+    stage.innerHTML='<title id="stageTitle">'+FORMS[state.form].name+' i '+state.leg+' cm med '+cm(state.plate)+
+      ' cm plade, færdig højde '+cm(total)+' cm</title>'+s;
+  }
+
+  function renderPicks(total){
+    var grid=$('pickGrid');
+    var matches=PRODUCTS.filter(function(p){ return p.h===state.leg; });
+    var exact=matches.filter(function(p){ return p.form===state.form; });
+    var list=exact.concat(matches.filter(function(p){ return p.form!==state.form; })).slice(0,3);
+
+    $('pickTitle').textContent = state.leg + ' cm bordben til dit ' + USES[state.use].name.toLowerCase();
+    $('pickSub').textContent = list.length
+      ? 'Med din plade på ' + cm(state.plate) + ' cm ender bordet på ' + cm(total) + ' cm. Prisen herunder er for ' + state.qty + ' ben.'
+      : 'Vi har ikke lagt priser ind for denne kombination endnu.';
+
+    grid.innerHTML='';
+    if(!list.length){
+      grid.innerHTML = '<div class="emptypick"><h3>Se alle ben i '+state.leg+' cm</h3>'+
+        '<p style="color:var(--soft);margin:10px 0 18px">Vælg form og farve i oversigten.</p>'+
+        '<a class="btn btn-dark" href="/bogstavs-bordben/">Se '+state.leg+' cm bordben</a></div>';
+    } else {
+      list.forEach(function(p,i){
+        var line=p.price*state.qty;
+        var el=document.createElement('div');
+        el.className='card'+(i===0?' best':'');
+        el.innerHTML =
+          (i===0?'<span class="badge">Bedste match</span>':'')+
+          '<a class="ph" href="'+p.url+'"><img src="'+p.img+'" alt="'+p.name+' '+p.h+' cm" loading="lazy"></a>'+
+          '<div class="body">'+
+            '<div class="cat">'+FORMS[p.form].name+' · '+p.h+' cm · '+p.finish+'</div>'+
+            '<h4><a href="'+p.url+'">'+p.name+'</a></h4>'+
+            '<div class="stock"><i></i>På lager · afsendes i dag ved bestilling inden kl. 14</div>'+
+            '<div class="linetotal"><b>'+kr(line)+'</b><em>'+state.qty+' × '+kr(p.price)+'</em></div>'+
+          '</div>'+
+          '<button class="add" type="button">Læg '+state.qty+' ben i kurv</button>';
+        grid.appendChild(el);
+      });
+    }
+
+    var best = list.length ? list[0].price*state.qty : 0;
+    var pct = Math.min(100, Math.round(best/FREE_SHIP*100));
+    $('meterFill').style.width = pct + '%';
+    if(!list.length){
+      $('meterHead').textContent='Fri fragt';
+      $('meterText').textContent='ved køb over '+kr(FREE_SHIP)+' til pakkeshop.';
+    } else if(best>=FREE_SHIP){
+      $('meterHead').textContent='Fri fragt opnået.';
+      $('meterText').textContent='Dit sæt på '+state.qty+' ben sendes uden fragtomkostning.';
+    } else {
+      $('meterHead').textContent='Der mangler '+kr(FREE_SHIP-best)+'.';
+      $('meterText').textContent='Så er fragten fri. Filtpuder og skruer tæller med.';
+    }
+
+    $('stickyTitle').textContent = state.leg+' cm '+FORMS[state.form].name.toLowerCase();
+    $('stickySub').textContent = list.length ? 'Fra '+kr(list[0].price*state.qty)+' for '+state.qty+' ben' : 'Se udvalget';
+  }
+
+  function render(){
+    var u=USES[state.use], f=FORMS[state.form];
+
+    // form skal kunne fås i en højde der giver mening for brugen
+    var wanted = u.ideal - state.plate;
+    var allowed = f.heights;
+    state.leg = nearest(wanted, allowed);
+    var total = state.leg + state.plate;
+
+    if(!state.qtyTouched) state.qty = f.per;
+
+    Array.prototype.forEach.call(useChips.children, function(b){
+      b.setAttribute('aria-pressed', b.dataset.k===state.use); });
+    Array.prototype.forEach.call(formChips.children, function(b){
+      b.setAttribute('aria-pressed', b.dataset.k===state.form); });
+
+    $('plateVal').textContent = state.plate.toFixed(1).replace('.',',')+' cm';
+    $('legOut').innerHTML = state.leg + '<span>cm ben</span>';
+    $('qOut').textContent = state.qty;
+    $('qHint').textContent = state.qty<=2 ? 'to endeben bærer op til ca. 200 cm plade' : 'fire enkeltben, ét i hvert hjørne';
+
+    var within = total>=u.min && total<=u.max;
+    $('note').textContent = state.leg+' cm ben plus din plade på '+cm(state.plate)+' cm giver et færdigt bord på '+
+      cm(total)+' cm. '+(within
+        ? 'Det ligger inden for de '+u.min+'–'+u.max+' cm, der er behagelige til et '+u.name.toLowerCase()+'.'
+        : (total>u.max
+            ? 'Det er '+cm(total-u.max)+' cm over det anbefalede til et '+u.name.toLowerCase()+'. Vælg en tyndere plade, eller gå en benhøjde ned.'
+            : 'Det er '+cm(u.min-total)+' cm under det anbefalede til et '+u.name.toLowerCase()+'. Vælg en tykkere plade, eller gå en benhøjde op.'));
+    var flag=$('flag');
+    flag.className='flag '+(within?'ok':'warn');
+    flag.textContent = within ? 'Højden passer til formålet' : 'Tjek målene en ekstra gang';
+
+    $('formHint').textContent = f.name+' fås i '+f.heights.join(', ')+' cm. '+
+      (f.per===2?'To ben er nok til et almindeligt bord.':'Hairpin er enkeltben — der skal fire til et bord.');
+
+    drawStage(total);
+    renderPicks(total);
+  }
+
+  buildChips(useChips, USES, 'use', function(k){
+    state.use=k; state.qtyTouched=false;
+    // vælg automatisk en form der findes i en passende højde
+    var wanted = USES[k].ideal - state.plate;
+    if(FORMS[state.form].heights.every(function(h){ return Math.abs(h-wanted)>9; })){
+      var pick='hairpin';
+      Object.keys(FORMS).forEach(function(fk){
+        if(pick==='hairpin' && FORMS[fk].heights.some(function(h){ return Math.abs(h-wanted)<=6; })) pick=fk;
+      });
+      state.form=pick;
+    }
+    render();
+  });
+  buildChips(formChips, FORMS, 'form', function(k){ state.form=k; state.qtyTouched=false; render(); });
+
+  plate.addEventListener('input', function(){ state.plate=parseFloat(plate.value); render(); });
+  $('qMinus').addEventListener('click', function(){ if(state.qty>1){state.qty--; state.qtyTouched=true; render();} });
+  $('qPlus').addEventListener('click', function(){ if(state.qty<8){state.qty++; state.qtyTouched=true; render();} });
+
+  render();
+})();
+</script>
+</body>
+</html>
